@@ -1,45 +1,21 @@
-@media (max-width: 767px) {
-    .datepicker-desktop {
-        display: none;
-    }
+.datepicker-desktop {
 
-    .datepicker-mobile {
-        display: block;
-    }
-
-    .datepicker-mobile input {
-        width: 100%;
-        height: 34px;
-        margin-bottom: 16px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
 }
 
-@media (min-width: 767px) {
-    .datepicker-mobile {
-        display: none;
-    }
+.datepicker-desktop input {
+    width: 90% !important;
+    float: left;
+}
 
-    .datepicker-desktop {
+.datepicker-desktop a {
+    float: left;
+    border-bottom: none !important;
+}
 
-    }
+.datepicker-desktop a img {
+    height: 41px !important;
+}
 
-    .datepicker-desktop input {
-        width: 90% !important;
-        float: left;
-    }
-
-    .datepicker-desktop a {
-        float: left;
-        border-bottom: none !important;
-    }
-
-    .datepicker-desktop a img {
-        height: 41px !important;
-    }
-
-    .datepicker-desktop .clear {
-        clear: both;
-    }
+.datepicker-desktop .clear {
+    clear: both;
 }

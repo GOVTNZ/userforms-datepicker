@@ -25,7 +25,7 @@ class AccdcDatepickerField extends EditableFormField {
 
     function getMobileField()
     {
-        Requirements::css(USERFORMS_DATEPICKER_DIR . '/css/userform-datepicker.css');
+        Requirements::css(USERFORMS_DATEPICKER_DIR . '/css/userform-datepicker-mobile.css');
 
         $field = TextField::create(
             $this->Name,

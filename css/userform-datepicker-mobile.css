@@ -1,0 +1,11 @@
+.datepicker-mobile {
+    display: block;
+}
+
+.datepicker-mobile input {
+    width: 100%;
+    height: 34px;
+    margin-bottom: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
