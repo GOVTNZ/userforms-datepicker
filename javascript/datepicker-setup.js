@@ -15,7 +15,7 @@
                     $(e).prev()[0],
                     false,
                     function (ev, dc, targ) {
-                        targ.value = dc.range.current.year + '-' + pad(dc.range.current.month, 2) + '-' + pad(dc.range.current.wDay, 2);
+                        targ.value = dc.range.current.year + '-' + pad(dc.range.current.month + 1, 2) + '-' + pad(dc.range.current.mDay, 2);
                         dc.close();
                     },
                     {
@@ -36,5 +36,11 @@
     });
 
 })();
+
+
+// targ is the Input field with id="date"
+// Save the desired date string
+targ.value = dc.range.wDays[dc.range.current.wDay].lng + ' ' + dc.range[dc.range.current.month].name + ' '
+    + dc.range.current.mDay + ', ' + dc.range.current.year;
 
 
