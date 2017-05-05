@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Mobile_Detect.php';
-
 class AccdcDatepickerField extends EditableFormField {
 
     private static $singular_name = 'Datepicker Field (accessible)';
