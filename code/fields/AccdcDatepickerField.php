@@ -42,6 +42,8 @@ class AccdcDatepickerField extends EditableFormField {
     {
         Requirements::javascript(USERFORMS_DATEPICKER_DIR . '/javascript/bootstrap-jquery/js/Acc.DC.API.js');
         Requirements::javascript(USERFORMS_DATEPICKER_DIR . '/javascript/bootstrap-jquery/js/modules/calendar_generator.js');
+        Requirements::javascript(USERFORMS_DATEPICKER_DIR . '/javascript/moment.js');
+        Requirements::javascript(USERFORMS_DATEPICKER_DIR . '/javascript/jquery.maskedinput.js');
         Requirements::javascript(USERFORMS_DATEPICKER_DIR . '/javascript/datepicker-setup.js');
 
         Requirements::css(USERFORMS_DATEPICKER_DIR . '/javascript/bootstrap-jquery/css/calendar.css');
@@ -57,5 +59,4 @@ class AccdcDatepickerField extends EditableFormField {
 
         return $field;
     }
-
 }
