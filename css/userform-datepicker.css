@@ -3,7 +3,7 @@
 }
 
 .datepicker-desktop input {
-    width: 93% !important;
+    width: 92% !important;
     float: left;
 }
 
@@ -14,6 +14,7 @@
 
 .datepicker-desktop a img {
     height: 41px !important;
+    width: 41px !important;
 }
 
 .datepicker-desktop .clear {
