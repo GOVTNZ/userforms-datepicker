@@ -36,11 +36,3 @@
     });
 
 })();
-
-
-// targ is the Input field with id="date"
-// Save the desired date string
-targ.value = dc.range.wDays[dc.range.current.wDay].lng + ' ' + dc.range[dc.range.current.month].name + ' '
-    + dc.range.current.mDay + ', ' + dc.range.current.year;
-
-
