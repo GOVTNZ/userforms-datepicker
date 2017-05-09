@@ -12,15 +12,12 @@
                 var input = $(e).prev()[0],
                     formatted = $(input).prev()[0],
                     inputFormat = $(input).attr('data-date-inputformat'),
-                    inputMask = $(input).attr('data-date-inputmask'),
                     displayFormat = $(input).attr('data-date-displayformat'),
                     id = input.name + '-calendar';
 
                 // switch names between input field and hidden field
                 formatted.name = input.name;
                 input.name = formatted.name + '_u';
-
-                $(input).mask(inputMask,{placeholder:displayFormat});
 
                 $A.setCalendar(
                     id,
