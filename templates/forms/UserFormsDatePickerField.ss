@@ -11,13 +11,14 @@
            type="text"
            name="{$Name}"
            id="{$Id}"
-           placeholder="e.g. 27/3/1972"
-        <% if $RightTitle %>aria-describedby="{$Name}_right_title" <% end_if %>/>
+           placeholder="e.g. 27/3/1972" />
 
-    <a role="button" aria-describedby="{$Id}" href="#" id="dateIcon_{$Id}" class="accCalendar datePicker" aria-expanded="false">
+    <%-- if $RightTitle %>aria-describedby="{$Name}_right_title" <% end_if --%>
+
+    <button class="accCalendar datePicker datepicker-button" aria-describedby="{$Id}" aria-expanded="false">
         <img src="userforms-datepicker/javascript/bootstrap-jquery/img/calendar/calendar-button.svg"
              alt="You can use this calendar to pick a date"
              title="You can use this calendar to pick a date">
-    </a>
+    </button>
     <div class="clear"></div>
 </div>

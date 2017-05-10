@@ -20,3 +20,11 @@
 .datepicker-desktop .clear {
     clear: both;
 }
+
+.datepicker-button {
+    padding: 0;
+    border: none;
+    width: 41px;
+    background-color: transparent;
+    height: 41px;
+}
