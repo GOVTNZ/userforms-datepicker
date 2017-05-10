@@ -15,7 +15,9 @@
         <% if $RightTitle %>aria-describedby="{$Name}_right_title" <% end_if %>/>
 
     <a role="button" aria-describedby="{$Id}" href="#" id="dateIcon_{$Id}" class="accCalendar datePicker" aria-expanded="false">
-        <img src="userforms-datepicker/javascript/bootstrap-jquery/img/calendar/calendar-button.svg" alt="Calendar" title="Calendar">
+        <img src="userforms-datepicker/javascript/bootstrap-jquery/img/calendar/calendar-button.svg"
+             alt="You can use this calendar to pick a date"
+             title="You can use this calendar to pick a date">
     </a>
     <div class="clear"></div>
 </div>
