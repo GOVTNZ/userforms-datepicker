@@ -16,11 +16,12 @@ class AccdcDatepickerField extends EditableFormField {
     {
         $detect = new Mobile_Detect;
 
-        if ( $detect->isMobile() ) {
-            return $this->getMobileField();
-        }
+        $field = ( $detect->isMobile() )
+            ? $this->getMobileField()
+            : $this->getDesktopField();
+        $field->addExtraClass('datepickeraccessible');
 
-        return $this->getDesktopField();
+        return $field;
     }
 
     function getMobileField()
