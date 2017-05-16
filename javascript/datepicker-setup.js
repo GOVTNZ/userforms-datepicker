@@ -30,6 +30,8 @@
                         targ.value = moment(dc.date).format(displayFormat);
 
                         dc.close();
+
+                        $(input).focus();
                     }, {
                         // Set CSS positioning calculation for the calendar
                         autoPosition: 6,
