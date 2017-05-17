@@ -6,11 +6,8 @@
     </div>
 
     <input type="hidden" name="{$Name}_formatted" >
-    <input data-date-inputformat="D/M/YYYY"
+    <input $AttributesHTML data-date-inputformat="D/M/YYYY"
            data-date-displayformat="DD/MM/YYYY"
-           type="text"
-           name="{$Name}"
-           id="{$Id}"
            placeholder="for example, 27/3/1972" />
 
     <%-- if $RightTitle %>aria-describedby="{$Name}_right_title" <% end_if --%>
