@@ -18,6 +18,11 @@
                 // switch names between input field and hidden field
                 formatted.name = input.name;
                 input.name = formatted.name + '_u';
+                
+                // Format date for display if returned from server
+                if ($(input).val().trim() !== '') {
+                    $(input).val(moment($(input).val()).format(displayFormat));
+                } 
 
                 $A.setCalendar(
                     id,
