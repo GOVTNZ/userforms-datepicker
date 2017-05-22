@@ -19,6 +19,11 @@
                 formatted.name = input.name;
                 input.name = formatted.name + '_u';
                 
+                // Ensure the visible input has any aria-describedby attribute
+                if (typeof $(input).attr('aria-describedby') === 'undefined' && typeof $(formatted).attr('aria-describedby') !== 'undefined'){
+                    $(input).attr('aria-describedby', $(formatted).attr('aria-describedby'));
+                }                
+                
                 // Format date for display if returned from server
                 if ($(input).val().trim() !== '') {
                     $(input).val(moment($(input).val()).format(displayFormat));
