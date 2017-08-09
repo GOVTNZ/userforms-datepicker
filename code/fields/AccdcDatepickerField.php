@@ -17,7 +17,7 @@ class AccdcDatepickerField extends EditableFormField {
         $detect = new Mobile_Detect;
 
         $field = ( $detect->isMobile() )
-            ? $this->getMobileField()
+            ? $this->getDesktopField()
             : $this->getDesktopField();
         $field->addExtraClass('datepickeraccessible');
 
@@ -27,6 +27,7 @@ class AccdcDatepickerField extends EditableFormField {
     function getMobileField()
     {
         Requirements::css(USERFORMS_DATEPICKER_DIR . '/css/userform-datepicker-mobile.css');
+        Requirements::javascript(USERFORMS_DATEPICKER_DIR . '/javascript/moment.js');
 
         $field = TextField::create(
             $this->Name,
