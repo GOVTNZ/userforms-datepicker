@@ -1,0 +1,6 @@
+---
+Name: userformdatepickerlegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    AccdcDatepickerField: 'GovtNZ\SilverStripe\UserFormsDatePicker\AccdcDatepickerField'
