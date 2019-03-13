@@ -5,6 +5,7 @@ namespace GovtNZ\SilverStripe\UserFormsDatePicker;
 use SilverStripe\UserForms\Model\EditableFormField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\View\Requirements;
+use Mobile_Detect;
 
 class AccdcDatepickerField extends EditableFormField
 {
