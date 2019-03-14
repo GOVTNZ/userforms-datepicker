@@ -4,6 +4,8 @@ namespace GovtNZ\SilverStripe\UserFormsDatePicker;
 
 use SilverStripe\UserForms\Model\EditableFormField;
 use SilverStripe\Forms\TextField;
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Core\Manifest\ModuleResourceLoader;
 use SilverStripe\View\Requirements;
 use Mobile_Detect;
 
@@ -55,11 +57,13 @@ class AccdcDatepickerField extends EditableFormField
      */
     public function getDesktopField()
     {
+        $loader = Injector::inst()->get(ModuleResourceLoader::class);
+
         Requirements::combine_files('userform-datepicker.js', [
-            'govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/js/Acc.DC.API.js',
-            'govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/js/modules/calendar_generator.js',
-            'govtnz/silverstripe-userforms-datepicker:client/javascript/moment.js',
-            'govtnz/silverstripe-userforms-datepicker:client/javascript/datepicker-setup.js'
+            $loader->resolvePath('govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/js/Acc.DC.API.js'),
+            $loader->resolvePath('govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/js/modules/calendar_generator.js'),
+            $loader->resolvePath('govtnz/silverstripe-userforms-datepicker:client/javascript/moment.js'),
+            $loader->resolvePath('govtnz/silverstripe-userforms-datepicker:client/javascript/datepicker-setup.js')
         ]);
 
         Requirements::css('govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/css/calendar.css');
