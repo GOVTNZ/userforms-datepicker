@@ -55,12 +55,12 @@ class AccdcDatepickerField extends EditableFormField
      */
     public function getDesktopField()
     {
-        Requirements::combine_files('userform-datepicker.js',
+        Requirements::combine_files('userform-datepicker.js', [
             'govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/js/Acc.DC.API.js',
             'govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/js/modules/calendar_generator.js',
             'govtnz/silverstripe-userforms-datepicker:client/javascript/moment.js',
             'govtnz/silverstripe-userforms-datepicker:client/javascript/datepicker-setup.js'
-        );
+        ]);
 
         Requirements::css('govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/css/calendar.css');
         Requirements::css('govtnz/silverstripe-userforms-datepicker:client/css/userform-datepicker.css');
