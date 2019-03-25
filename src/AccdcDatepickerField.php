@@ -16,6 +16,8 @@ class AccdcDatepickerField extends EditableFormField
 
     private static $plural_name = 'Datepicker Fields (accessible)';
 
+    private static $table_name = 'AccdcDatepickerField';
+    
     /**
      * @return TextField
      */
