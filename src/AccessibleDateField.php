@@ -15,38 +15,27 @@ class AccessibleDateField extends TextField
     {
         $detect = new Mobile_Detect;
 
-        $field = ( $detect->isMobile() )
-            ? $this->getDesktopField()
-            : $this->getDesktopField();
+        if ($detect->isMobile()) {
+            $this->prepareMobileField();
+        } else {
+            $this->prepareDesktopField();
+        }
         
-        $field->addExtraClass('datepickeraccessible');
+        $this->addExtraClass('datepickeraccessible');
 
-        return $field;
+        return parent::Field($properties);
     }
     
-    /**
-     * @return TextField
-     */
-    public function getMobileField($properties = [])
+    public function prepareMobileField()
     {
         Requirements::css('govtnz/silverstripe-userforms-datepicker:client/css/userform-datepicker-mobile.css');
         Requirements::javascript('govtnz/silverstripe-userforms-datepicker:client/javascript/moment.js');
 
-        $field = TextField::create(
-            $this->Name,
-            $this->EscapedTitle,
-            $this->Default
-        )
-            ->setFieldHolderTemplate('UserFormsField_holder')
-            ->setTemplate('UserFormsDatePickerField-mobile');
-
-        return $field;
+        $this->setFieldHolderTemplate('UserFormsField_holder');
+        $this->setTemplate('UserFormsDatePickerField-mobile');
     }
 
-    /**
-     * @return TextField
-     */
-    public function getDesktopField($properties = [])
+    public function prepareDesktopField()
     {
         $loader = Injector::inst()->get(ModuleResourceLoader::class);
 
@@ -60,14 +49,7 @@ class AccessibleDateField extends TextField
         Requirements::css('govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/css/calendar.css');
         Requirements::css('govtnz/silverstripe-userforms-datepicker:client/css/userform-datepicker.css');
 
-        $field = TextField::create(
-            $this->Name,
-            $this->EscapedTitle,
-            $this->Default
-        )
-            ->setFieldHolderTemplate('UserFormsField_holder')
-            ->setTemplate('UserFormsDatePickerField');
-
-        return $field;
+        $this->setFieldHolderTemplate('UserFormsField_holder');
+        $this->setTemplate('UserFormsDatePickerField');
     }
 }
