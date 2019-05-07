@@ -22,6 +22,7 @@ class AccessibleDateField extends TextField
         }
         
         $this->addExtraClass('datepickeraccessible');
+        $this->setAttribute('type', 'text');
 
         return parent::Field($properties);
     }

@@ -24,7 +24,7 @@ class AccdcDatepickerField extends EditableFormField
     public function getFormField()
     {
         $field = Injector::inst()->create(
-            AccessibleDateField::class, 
+            AccessibleDateField::class,
             $this->Name,
             $this->Title
         );
