@@ -1,10 +1,9 @@
 .datepicker-desktop {
-
+    display: flex;
 }
 
 .datepicker-desktop input {
     width: 92% !important;
-    float: left;
 }
 
 .datepicker-desktop a {
