@@ -12,7 +12,7 @@
 
     <%-- if $RightTitle %>aria-describedby="{$Name}_right_title" <% end_if --%>
 
-    <button class="accCalendar datePicker datepicker-button" aria-describedby="{$Id}" aria-expanded="false"
+    <button type="button" class="accCalendar datePicker datepicker-button" aria-describedby="{$Id}" aria-expanded="false"
         aria-label="You can use this calendar to pick a date">
         <img src="$resourceURL(govtnz/silverstripe-userforms-datepicker:client/javascript/bootstrap-jquery/img/calendar/calendar-button.svg)"
              alt="You can use this calendar to pick a date"
